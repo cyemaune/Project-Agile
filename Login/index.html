@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITCHAT Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+้
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-container">
+            <div class="logo">
+                <img src="logo.png" alt="BITCHAT Logo" class="logo-image">
+            </div>
+        </div>        
+        
+        <!-- Right Side (Login Form) -->
+        <div class="right-container">
+            <h2 class="login-title">Account Login</h2>
+            <form class="login-form">
+                <div class="input-box id-input">
+                    <input type="text" id="user-id" required>
+                    <label for="user-id" class="id-label">ID</label>
+                    <small class="id-note">*Please use company’s ID</small>
+                </div>
+
+                <div class="input-box password-input">
+                    <input type="password" id="password" required>
+                    <label for="password" class="password-label">Password</label>
+                </div>
+
+                <div class="options">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#" class="reset-password">Reset Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
