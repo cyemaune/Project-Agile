@@ -222,6 +222,7 @@ header {
 }
 
 .status.pending {
+    cursor: pointer;
     background: #FFC329;
     color: #112D4E;
 }
