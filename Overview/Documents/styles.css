@@ -1,0 +1,387 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #F6FDFF;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #112D4E;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #F5EFE7;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.menu-item.active, .menu-item:hover {
+    background: #3F72AF;
+    border-radius: 16px;
+}
+
+/* Logout */
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    color: #F5EFE7;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 360px;
+}
+
+/* Search Bar */
+.search-container {
+    flex: 1;
+    margin-top: 60px;
+}
+
+.search-bar {
+    flex: 1;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    color: #F9F7F7;
+    padding: 10px;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #112D4E;
+}
+
+.search-bar::placeholder {
+    color: #F9F7F7;
+    opacity: 0.7;
+}
+
+/* User Profile */
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.user-info {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #112D4E;
+}
+
+.user-info p {
+    font-size: 12px;
+    color: #3F72AF;
+    font-weight: 549;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Document List */
+.documents {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Document Card */
+.document-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Alternating Row Colors */
+.document-card:nth-child(odd) {
+    background: #DBE2EF; /* First row color */
+}
+
+.document-card:nth-child(even) {
+    background: #F9F7F7; /* Second row color */
+}
+
+/* Ensure consistent column width */
+.doc-info {
+    display: flex;
+    flex-direction: column;
+    width: 200px; /* Fixed width to keep alignment */
+}
+
+.doc-info h3 {
+    font-size: 16px;
+}
+
+.doc-info p {
+    font-size: 14px;
+    color: #3F72AF;
+}
+
+/* Document Type */
+.doc-meta {
+    width: 150px; /* Fixed width for document type */
+    text-align: center;
+    font-weight: bold;
+    color: #112D4E;
+}
+
+/* Reported Time Alignment */
+.reported {
+    width: 180px; /* Ensures reported time is aligned properly */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.reported .label {
+    font-weight: bold;
+    color: #333;
+    font-size: 13px;
+}
+
+.reported .time {
+    font-size: 12px;
+    color: #112D4E;
+}
+
+/* Status Styling */
+.status {
+    width: 110px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status.pending {
+    background: #FFC329;
+    color: #112D4E;
+}
+
+.status.approved {
+    background: #3F861E;
+    color: white;
+}
+
+.profile-dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 70px; /* Adjust positioning */
+    right: 20px;
+    width: 323px;
+    height: 200px;
+    flex-shrink: 0;
+    background: #F0F5FF;
+    border: 3px solid #112D4E;
+    border-radius: 10px 0px 10px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+}
+
+
+/* Profile Dropdown Content */
+.profile-dropdown .dropdown-content {
+    text-align: center;
+}
+
+/* Profile Image */
+.profile-dropdown img.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Profile Name */
+.profile-dropdown h3 {
+    color: #112D4E;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Profile Role */
+.profile-dropdown p {
+    font-size: 14px;
+    color: #3F72AF;
+    margin-bottom: 5px;
+}
+
+/* Close Button */
+.profile-dropdown .close {
+    position: absolute;
+    bottom: 165px;
+    right: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #112D4E;
+    transition: right 0.3s ease-in-out;
+}
+
+/* Cursor Pointer for HR Section */
+.hr-section {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+
+/* HR Section */
+.hr-section {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hr-info {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #112D4E;
+}
+
+.hr-info p {
+    font-size: 12px;
+    color: #3F72AF;
+    font-weight: 549;
+    line-height: normal;
+    letter-spacing: 0.36px;
+}
+
+.hr-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.popup-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.approve-btn {
+    background: #3F861E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel-btn {
+    background: white;
+    color: red;
+    padding: 10px 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}

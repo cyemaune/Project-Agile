@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="ChatBit Logo">
+        </div>
+        <nav class="menu">
+            <div class="menu-item">
+                <img src="images/Dashboard.png" alt="Dashboard">
+                <span>Dashboard</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/Messages.png" alt="Messages">
+                <span>Messages</span>
+            </div>
+            <div class="menu-item active">
+                <img src="images/Documents.png" alt="Documents">
+                <span>Documents</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/Employees.png" alt="Employees">
+                <span>Employees</span>
+            </div>
+        </nav>
+        <div class="logout">
+            <img src="images/LogOut.png" alt="Log Out">
+            <span>Log Out</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="hr-section" id="profile-button">
+                <div class="user-info">
+                    <strong>Charles Whitaker</strong>
+                    <p>Human Resources Manager</p>
+                </div>
+                <img id="profile-button" src="images/HR.jpg" alt="User"> <!-- Added id="profile-button" -->
+            </div>
+        </header>
+
+            <!-- Profile Dropdown (Initially Hidden) -->
+            <div id="profileDropdown" class="profile-dropdown">
+                 <div class="dropdown-content">
+                    <img src="images/HR.jpg" alt="Profile" class="profile-pic">
+                    <h3>Charles Whitaker</h3>
+                    <p>Human Resources Manager</p>
+                    <p><strong>Employee ID:</strong> 256789120155</p>
+                </div>
+            </div>
+
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+
+        <!-- Document List -->
+        <div class="documents">
+            <div class="document-card pending">
+                <div class="doc-info">
+                    <h3>Charlotte Harrison</h3>
+                    <p>Accountant</p>
+                </div>
+                <div class="doc-meta">Invoice</div>
+                <div class="reported">
+                    <span class="time"><strong>Reported: </strong>Today 6:43 P.M.</span>
+                </div>
+                <p class="status pending popup-trigger" data-image="images/invoice.jpg">Pending</p>
+            </div>
+
+            <div class="document-card pending">
+                <div class="doc-info">
+                    <h3>Sophia Bennett</h3>
+                    <p>Auditor</p>
+                </div>
+                <div class="doc-meta">Quotation</div>
+                <div class="reported">
+                    <span class="time"><strong>Reported: </strong>Today 6:40 P.M.</span>
+                </div>
+                <p class="status pending popup-trigger" data-image="images/Quotation.jpg">Pending</p>
+            </div>
+
+            <div class="document-card pending">
+                <div class="doc-info">
+                    <h3>Alexander Scott</h3>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="doc-meta">Project Proposal</div>
+                <div class="reported">
+                    <span class="time"><strong>Reported: </strong>Today 6:30 P.M.</span>
+                </div>
+                <p class="status pending popup-trigger" data-image="images/Project-proposal.jpg">Pending</p>
+            </div>
+
+            <div class="document-card approved">
+                <div class="doc-info">
+                    <h3>Olivia Carter</h3>
+                    <p>Data Analyst</p>
+                </div>
+                <div class="doc-meta">Project Proposal</div>
+                <div class="reported">
+                    <span class="time"><strong>Reported: </strong>Today 6:20 P.M.</span>
+                </div>
+                <span class="status approved">Approved</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="images/sample-invoice.jpg" alt="Invoice Preview" class="popup-image">
+            <div class="popup-buttons">
+                <button class="approve-btn">Approve</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
