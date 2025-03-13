@@ -43,4 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function scrollToBottom() {
+    let messagesContainer = document.querySelector(".messages");
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+// Call this function whenever a new message is added
+document.querySelector(".send-button").addEventListener("click", function () {
+    scrollToBottom();
+});
+
+document.querySelector(".message-input").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        scrollToBottom();
+    }
+});
 

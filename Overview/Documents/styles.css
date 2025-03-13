@@ -49,9 +49,16 @@ body {
     margin-right: 10px;
 }
 
-.menu-item.active, .menu-item:hover {
+.menu-item.active {
     background: #3F72AF;
     border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.menu-item:hover {
+    background: #DBE2EF;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 /* Logout */
